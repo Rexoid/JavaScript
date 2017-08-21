@@ -2,11 +2,11 @@
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
 })();
-Request_JSON();
+onload = Request_JSON();
 
 function Request_JSON() {
-	var Level_Layout_JSON = "";
-	var Level_Assets_JSON = "";
+	var Level_Layout_JSON = "https://github.com/Rexoid/JavaScript/blob/master/Level_Layout.json";
+	var Level_Assets_JSON = "https://github.com/Rexoid/JavaScript/blob/master/Level_Assets.json";
 	var request_Layout = new XMLHttpRequest();
 	var request_Assets = new XMLHttpRequest();
 	request_Layout.open("GET", Level_Layout_JSON);
