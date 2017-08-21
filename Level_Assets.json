@@ -1,0 +1,47 @@
+{
+	"name":"objects",
+	"objects": [
+		{
+			"name":"player",
+			"width":50,
+			"height":50,
+			"icon":"5"
+		},
+		{
+			"name":"block",
+			"width":50,
+			"height":50,
+			"icon":"2"
+		},
+		{
+			"name":"kill_block",
+			"width":50,
+			"height":50,
+			"icon":"3"
+		},
+		{
+			"name":"win",
+			"width":50,
+			"height":50,
+			"icon":"4"
+		},
+		{
+			"name":"teleportS",
+			"width":50,
+			"height":50,
+			"icon":"6"
+		},
+		{
+			"name":"teleportR",
+			"width":50,
+			"height":50,
+			"icon":"7"
+		},
+		{
+			"name":"air",
+			"width":50,
+			"height":50,
+			"icon":"1"
+		}
+	]
+}
