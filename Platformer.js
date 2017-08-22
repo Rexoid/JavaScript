@@ -1,30 +1,24 @@
-onload = function() {
-	Request_JSON();
-}
-
 (function() {
     var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
     window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-function Request_JSON() {
-	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
-	var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Assets.json";
-	var request_Layout = new XMLHttpRequest();
-	var request_Assets = new XMLHttpRequest();
-	request_Layout.open("GET", Level_Layout_JSON);
-	request_Layout.responceType = "text";
-	request_Layout.send();
-	request_Layout.onload = function() {
-		var level_layout = request_Layout.responce;
-		Check_Active(level_layout);
-	}
-	request_Assets.open("GET", Level_Assets_JSON);
-	request_Assets.responceType = "text";
-	request_Assets.send();
-	request_Assets.onload = function() {
-		var level_assets = request_Assets.responce;
-	}
+var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
+var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Assets.json";
+var request_Layout = new XMLHttpRequest();
+var request_Assets = new XMLHttpRequest();
+request_Layout.open("GET", Level_Layout_JSON);
+request_Layout.responceType = "text";
+request_Layout.send();
+request_Layout.onload = function() {
+	var level_layout = request_Layout.responce;
+	Check_Active(level_layout);
+}
+request_Assets.open("GET", Level_Assets_JSON);
+request_Assets.responceType = "text";
+request_Assets.send();
+request_Assets.onload = function() {
+	var level_assets = request_Assets.responce;
 }
 
 function Check_Active(LVL) {
