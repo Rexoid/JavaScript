@@ -3,11 +3,11 @@
     window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-function Check_Active(LVL) {
-	for(var i=0; i<LVL.length; i++) {
-		var check_active = LVL[i].Active;
+function Check_Active(y) {
+	for(var i=0; i<y.length; i++) {
+		var check_active = y[i].Active;
 		if(check_active == "True") {
-			var Selected_Level = LVL[i].layout;
+			var Selected_Level = y[i].layout;
 			Generate_Level(Selected_Level);
 		}
 	}
@@ -60,6 +60,7 @@ request_Layout.responceType = "text";
 request_Layout.send();
 request_Layout.onload = function() {
 	var level_layout = request_Layout.responce;
+	alert(level_layout);
 	Check_Active(level_layout);
 }
 request_Assets.open("GET", Level_Assets_JSON);
