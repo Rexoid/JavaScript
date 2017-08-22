@@ -4,13 +4,12 @@
 })();
 
 function Check_Active(y) {
-	alert(y.Active);
-	alert(y.name);
-	alert(y.layout);
-	for(var i=0; i<lvl.length; i++) {
-		var check_active = y[i].Active;
+	alert(y);
+	alert(y.levels[0]);
+	for(var i=0; i<y.levels.length; i++) {
+		var check_active = y.levels[i].Active;
 		if(check_active == "True") {
-			var Selected_Level = y[i].layout;
+			var Selected_Level = y.levels[i].layout;
 			Generate_Level(Selected_Level);
 		}
 	}
