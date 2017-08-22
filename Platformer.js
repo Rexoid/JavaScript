@@ -57,16 +57,16 @@ var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Asset
 var request_Layout = new XMLHttpRequest();
 var request_Assets = new XMLHttpRequest();
 request_Layout.open("GET", Level_Layout_JSON);
-request_Layout.responceType = "text";
+request_Layout.responseType = "text";
 request_Layout.send();
 request_Layout.onload = function() {
-	var level_layout = request_Layout.responce;
+	var level_layout = request_Layout.response;
 	alert(level_layout);
 	Check_Active(level_layout);
 }
 request_Assets.open("GET", Level_Assets_JSON);
-request_Assets.responceType = "text";
+request_Assets.responseType = "text";
 request_Assets.send();
 request_Assets.onload = function() {
-	var level_assets = request_Assets.responce;
+	var level_assets = request_Assets.response;
 }
