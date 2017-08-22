@@ -4,6 +4,8 @@
 })();
 
 function Check_Active(y) {
+	var asdf = y["levels"];
+	alert(asdf);
 	for(var i=0; i<y.length; i++) {
 		var check_active = y[i].Active;
 		if(check_active == "True") {
@@ -61,8 +63,6 @@ request_Layout.send();
 request_Layout.onload = function() {
 	var level_layout = request_Layout.response;
 	alert(level_layout);
-	var asdf = level_layout["levels"];
-	alert(asdf);
 	Check_Active(level_layout);
 }
 request_Assets.open("GET", Level_Assets_JSON);
