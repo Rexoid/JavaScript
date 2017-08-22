@@ -4,7 +4,7 @@
 })();
 
 function Check_Active(y) {
-	var asdf = y["levels"];
+	var asdf = y.levels;
 	alert(asdf);
 	for(var i=0; i<y.length; i++) {
 		var check_active = y[i].Active;
