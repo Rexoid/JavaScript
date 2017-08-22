@@ -4,8 +4,9 @@
 })();
 
 function Check_Active(y) {
-	var asdf = y.levels;
-	alert(asdf);
+	alert("y is equal to"+y);
+	var x = y["lvl"];
+	alert("x is equal to"+x);
 	for(var i=0; i<y.length; i++) {
 		var check_active = y[i].Active;
 		if(check_active == "True") {
@@ -61,9 +62,7 @@ request_Layout.open("GET", Level_Layout_JSON);
 request_Layout.responseType = "text";
 request_Layout.send();
 request_Layout.onload = function() {
-	var level_layout = request_Layout.response;
-	alert(level_layout);
-	Check_Active(level_layout);
+	Check_Active(request_Layout.response)
 }
 request_Assets.open("GET", Level_Assets_JSON);
 request_Assets.responseType = "text";
