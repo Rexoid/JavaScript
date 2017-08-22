@@ -8,8 +8,10 @@ function Check_Active(y) {
 	alert(y.levels[0]);
 	for(var i=0; i<y.levels.length; i++) {
 		var check_active = y.levels[i].Active;
+		alert(check_active);
 		if(check_active == "True") {
 			var Selected_Level = y.levels[i].layout;
+			alert(Selected_Level);
 			Generate_Level(Selected_Level);
 		}
 	}
