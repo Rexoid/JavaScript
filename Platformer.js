@@ -59,7 +59,7 @@ var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Asset
 var request_Layout = new XMLHttpRequest();
 var request_Assets = new XMLHttpRequest();
 request_Layout.open("GET", Level_Layout_JSON);
-request_Layout.responseType = "text";
+request_Layout.responseType = "json";
 request_Layout.send();
 request_Layout.onload = function() {
 	alert(request_Layout.response);
