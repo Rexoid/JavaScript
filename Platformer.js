@@ -4,11 +4,10 @@
 })();
 
 function Check_Active(y) {
-	var x = y["levels"];
-	for(var i=0; i<x.length; i++) {
-		var check_active = x[i].Active;
+	for(var i=0; i<y.length; i++) {
+		var check_active = y[i].Active;
 		if(check_active == "True") {
-			var Selected_Level = x[i].layout;
+			var Selected_Level = y[i].layout;
 			Generate_Level(Selected_Level);
 		}
 	}
