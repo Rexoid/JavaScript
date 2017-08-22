@@ -3,24 +3,6 @@
     window.requestAnimationFrame = requestAnimationFrame;
 })();
 
-var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
-var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Assets.json";
-var request_Layout = new XMLHttpRequest();
-var request_Assets = new XMLHttpRequest();
-request_Layout.open("GET", Level_Layout_JSON);
-request_Layout.responceType = "text";
-request_Layout.send();
-request_Layout.onload = function() {
-	var level_layout = request_Layout.responce;
-	Check_Active(level_layout);
-}
-request_Assets.open("GET", Level_Assets_JSON);
-request_Assets.responceType = "text";
-request_Assets.send();
-request_Assets.onload = function() {
-	var level_assets = request_Assets.responce;
-}
-
 function Check_Active(LVL) {
 	for(var i=0; i<LVL.length; i++) {
 		var check_active = LVL[i].Active;
@@ -67,4 +49,22 @@ function Generate_Level(Selected_Level_Layout) {
 			if(i<401) { block_object.style.top = 950+"px"; }
 		}
 	}
+}
+
+var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
+var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Assets.json";
+var request_Layout = new XMLHttpRequest();
+var request_Assets = new XMLHttpRequest();
+request_Layout.open("GET", Level_Layout_JSON);
+request_Layout.responceType = "text";
+request_Layout.send();
+request_Layout.onload = function() {
+	var level_layout = request_Layout.responce;
+	Check_Active(level_layout);
+}
+request_Assets.open("GET", Level_Assets_JSON);
+request_Assets.responceType = "text";
+request_Assets.send();
+request_Assets.onload = function() {
+	var level_assets = request_Assets.responce;
 }
