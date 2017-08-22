@@ -4,9 +4,7 @@
 })();
 
 function Check_Active(y) {
-	var lvl = y.lvl[0].Active;
-	alert("lvl is equal to "+lvl);
-	for(var i=0; i<y.length; i++) {
+	for(var i=0; i<lvl.length; i++) {
 		var check_active = y[i].Active;
 		if(check_active == "True") {
 			var Selected_Level = y[i].layout;
@@ -61,7 +59,8 @@ request_Layout.open("GET", Level_Layout_JSON);
 request_Layout.responseType = "text";
 request_Layout.send();
 request_Layout.onload = function() {
-	Check_Active(request_Layout.response)
+	alert(request_Layout.response);
+	Check_Active(request_Layout.response);
 }
 request_Assets.open("GET", Level_Assets_JSON);
 request_Assets.responseType = "text";
