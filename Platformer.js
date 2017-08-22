@@ -7,7 +7,6 @@ onload = function() {
 }
 
 function Request_JSON() {
-	document.getElementById("canvas").backgroundColor = rgb(0,0,0);
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
 	var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Assets.json";
 	var request_Layout = new XMLHttpRequest();
