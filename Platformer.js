@@ -4,6 +4,9 @@
 })();
 
 function Check_Active(y) {
+	alert(y.Active);
+	alert(y.name);
+	alert(y.layout);
 	for(var i=0; i<lvl.length; i++) {
 		var check_active = y[i].Active;
 		if(check_active == "True") {
