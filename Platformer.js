@@ -4,9 +4,8 @@
 })();
 
 function Check_Active(y) {
-	alert("y is equal to"+y);
-	var x = y[1];
-	alert("x is equal to"+x);
+	var lvl = y.lvl[0].Active;
+	alert("lvl is equal to "+lvl);
 	for(var i=0; i<y.length; i++) {
 		var check_active = y[i].Active;
 		if(check_active == "True") {
