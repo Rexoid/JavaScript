@@ -1,6 +1,6 @@
 {
 	"name":"Levels",
-	"levels": [
+	"lvl": [
 		{
 			"name":"Level1",
 			"Active":"True",
