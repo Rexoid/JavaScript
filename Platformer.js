@@ -1,9 +1,16 @@
-(function() {
-    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    window.requestAnimationFrame = requestAnimationFrame;
-})();
 onload = function() {
 	Request_JSON();
+}
+
+(function() { 
+  if (!window.requestAnimationFrame) { 
+    window.requestAnimationFrame = window.webkitRequestAnimationFrame || 
+                                   window.mozRequestAnimationFrame    || 
+                                   window.oRequestAnimationFrame      || 
+                                   window.msRequestAnimationFrame     || 
+                                   function(callback, element) {
+                                     window.setTimeout(callback, 1000 / 60);
+                                   }
 }
 
 function Request_JSON() {
@@ -12,23 +19,22 @@ function Request_JSON() {
 	var request_Layout = new XMLHttpRequest();
 	var request_Assets = new XMLHttpRequest();
 	request_Layout.open("GET", Level_Layout_JSON);
-	request_Layout.responceType = "json";
+	request_Layout.responceType = "text";
 	request_Layout.send();
 	request_Layout.onload = function() {
 		var level_layout = request_Layout.responce;
 		Check_Active(level_layout);
 	}
 	request_Assets.open("GET", Level_Assets_JSON);
-	request_Assets.responceType = "json";
+	request_Assets.responceType = "text";
 	request_Assets.send();
 	request_Assets.onload = function() {
 		var level_assets = request_Assets.responce;
-		Generate_Assets(level_assets);
 	}
 }
 
-function Check_Active(levels_all) {
-	var levels = levels_all["levels"];
+function Check_Active(LVL) {
+	var levels = LVL["levels"];
 	for(var i=0; i<levels.length; i++) {
 		var check_active = levels[i].Active;
 		if(check_active == "True") {
