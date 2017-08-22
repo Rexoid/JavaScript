@@ -22,11 +22,10 @@ request_Assets.onload = function() {
 }
 
 function Check_Active(LVL) {
-	var levels = LVL["levels"];
-	for(var i=0; i<levels.length; i++) {
-		var check_active = levels[i].Active;
+	for(var i=0; i<LVL.length; i++) {
+		var check_active = LVL[i].Active;
 		if(check_active == "True") {
-			var Selected_Level = levels[i].layout;
+			var Selected_Level = LVL[i].layout;
 			Generate_Level(Selected_Level);
 		}
 	}
