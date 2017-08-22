@@ -61,6 +61,8 @@ request_Layout.send();
 request_Layout.onload = function() {
 	var level_layout = request_Layout.response;
 	alert(level_layout);
+	var asdf = level_layout["levels"];
+	alert(asdf);
 	Check_Active(level_layout);
 }
 request_Assets.open("GET", Level_Assets_JSON);
