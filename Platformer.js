@@ -4,14 +4,14 @@
 })();
 
 function Check_Active(y) {
-	alert(y);
-	alert(y.levels[0]);
+	console.log(y);
+	console.log(y.levels[0]);
 	for(var i=0; i<y.levels.length; i++) {
 		var check_active = y.levels[i].Active;
-		alert(check_active);
+		console.log(check_active);
 		if(check_active == "True") {
 			var Selected_Level = y.levels[i].layout;
-			alert(Selected_Level);
+			colsole.log(Selected_Level);
 			Generate_Level(Selected_Level);
 		}
 	}
@@ -92,6 +92,14 @@ function Generate_Level(layout) {
 		}
 	}
 	update();
+	Control();
+}
+
+function Control() {
+	document.onkeypress = function(e) {
+		e = e.keyCode;
+		console.log(e);
+	};
 }
 
 function Setup_JSON() {
@@ -101,7 +109,7 @@ function Setup_JSON() {
 	request_Layout.responseType = "json";
 	request_Layout.send();
 	request_Layout.onload = function() {
-		alert(request_Layout.response);
+		console.log(request_Layout.response);
 		Check_Active(request_Layout.response);
 	}
 }
