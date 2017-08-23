@@ -20,9 +20,7 @@ function Check_Active(y) {
 function Generate_Level(layout) {
 	for(var g=0; g<layout.length; g++) {
 		var target = layout.substr(g,1);
-		alert(target);
 		var parentDiv = document.getElementById("Level");
-		if(target=="1") {}
 		if(target=="2") {
 			var object = document.createElement("canvas");
 			object.setAttribute("class","Block_Object");
@@ -30,6 +28,7 @@ function Generate_Level(layout) {
 			object.setAttribute("width","50");
 			object.setAttribute("height","50");
 			object.setAttribute("position","absolute");
+			parentDiv.appendChild(object);
 			if(g==0  ) {object.setAttribute("top","0  "); object.setAttribute("left","0  ");}
 			if(g==1  ) {object.setAttribute("top","0  "); object.setAttribute("left","50 ");}
 			if(g==2  ) {object.setAttribute("top","0  "); object.setAttribute("left","100");}
@@ -430,7 +429,6 @@ function Generate_Level(layout) {
 			if(g==397) {object.setAttribute("top","950"); object.setAttribute("left","850");}
 			if(g==398) {object.setAttribute("top","950"); object.setAttribute("left","900");}
 			if(g==399) {object.setAttribute("top","950"); object.setAttribute("left","950");}
-			parentDiv.appendChild(object);
 		}
 	}
 }
