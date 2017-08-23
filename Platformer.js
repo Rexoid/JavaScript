@@ -77,29 +77,23 @@ function Generate_Level(layout) {
 		}
 	}
 	var c = document.getElementsByClassName("Block_Object");
-	var ctx = c.getContext("2d");
 	var img = "https://rawgit.com/Rexoid/JavaScript/master/Image_Assets/Block_Object.png";
-	ctx.drawImage(img,0,0);
+	c.drawImage(img,0,0);
 	c = document.getElementsByClassName("Kill_Block_Object");
-	ctx = c.getContext("2d");
 	img = "https://rawgit.com/Rexoid/JavaScript/master/Image_Assets/Kill_Block_Object.png";
-	ctx.drawImage(img,0,0);
+	c.drawImage(img,0,0);
 	c = document.getElementsByClassName("Win_Block_Object");
-	ctx = c.getContext("2d");
 	img = "https://rawgit.com/Rexoid/JavaScript/master/Image_Assets/Win_Block_Object.png";
-	ctx.drawImage(img,0,0);
+	c.drawImage(img,0,0);
 	c = document.getElementsByClassName("Player_Block_Object");
-	ctx = c.getContext("2d");
 	img = "https://rawgit.com/Rexoid/JavaScript/master/Image_Assets/Player_Block_Object.png";
-	ctx.drawImage(img,0,0);
+	c.drawImage(img,0,0);
 	c = document.getElementsByClassName("Teleporter_Sender_Block_Object");
-	ctx = c.getContext("2d");
 	img = "https://rawgit.com/Rexoid/JavaScript/master/Image_Assets/Teleport_Sender_Block_Object.png";
-	ctx.drawImage(img,0,0);
+	c.drawImage(img,0,0);
 	c = document.getElementsByClassName("Teleporter_Reciever_Block_Object");
-	ctx = c.getContext("2d");
 	img = "https://rawgit.com/Rexoid/JavaScript/master/Image_Assets/Teleport_Receiver_Block_Object.png";
-	ctx.drawImage(img,0,0);
+	c.drawImage(img,0,0);
 }
 var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
 var Level_Assets_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Assets.json";
