@@ -20,6 +20,7 @@ function Check_Active(y) {
 function Generate_Level(layout) {
 	for(var g=0; g<layout.length; g++) {
 		var target = layout.substr(g,1);
+		alert(target);
 		var parentDiv = document.getElementById("Level");
 		if(target=="1") {}
 		if(target=="2") {
@@ -430,7 +431,6 @@ function Generate_Level(layout) {
 			if(g==398) {object.setAttribute("top","950"); object.setAttribute("left","900");}
 			if(g==399) {object.setAttribute("top","950"); object.setAttribute("left","950");}
 			parentDiv.appendChild(object);
-			
 		}
 	}
 }
