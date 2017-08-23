@@ -98,7 +98,7 @@ function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
 	var request_Layout = new XMLHttpRequest();
 	request_Layout.open("GET", Level_Layout_JSON);
-	request_Layout.responseType = "text";
+	request_Layout.responseType = "json";
 	request_Layout.send();
 	request_Layout.onload = function() {
 		alert(request_Layout.response);
