@@ -27,7 +27,7 @@ function Generate_Level(layout) {
 			object.setAttribute("id",toString(g));
 			object.setAttribute("width","50");
 			object.setAttribute("height","50");
-			object.setAttribute("position","absolute");
+			object.style.position = "absolute";
 			parentDiv.appendChild(object);
 			if(g==0  ) { object.style.top = 0  +"px"; object.style.left = 0  +"px"; }
 			if(g==1  ) { object.style.top = 0  +"px"; object.style.left = 50 +"px"; }
