@@ -25,7 +25,7 @@ function Generate_Level(layout) {
 		if(target=="2") {
 			var object = document.createElement("canvas");
 			object.setAttribute("class","Block_Object");
-			object.setAttribute("id",string(g));
+			object.setAttribute("id",toString(g));
 			object.setAttribute("width","50");
 			object.setAttribute("height","50");
 			object.setAttribute("position","absolute");
