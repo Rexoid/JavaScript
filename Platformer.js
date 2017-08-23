@@ -11,7 +11,7 @@ function Check_Active(y) {
 		console.log(check_active);
 		if(check_active == "True") {
 			var Selected_Level = y.levels[i].layout;
-			colsole.log(Selected_Level);
+			console.log(Selected_Level);
 			Generate_Level(Selected_Level);
 		}
 	}
