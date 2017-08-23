@@ -95,7 +95,7 @@ function Generate_Level(layout) {
 }
 
 function Setup_JSON() {
-	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json";
+	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
 	var request_Layout = new XMLHttpRequest();
 	request_Layout.open("GET", Level_Layout_JSON);
 	request_Layout.responseType = "json";
