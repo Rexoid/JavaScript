@@ -96,6 +96,15 @@ function Generate_Level(layout) {
 function KeyFilter(event) {
 	var key = event.keyCode;
 	console.log(key);
+	if(key==87) { var W = "W"; Control(W); }
+	if(key==65) { var A = "A"; Control(A); }
+	if(key==83) { var S = "S"; Control(S); }
+	if(key==68) { var D = "D"; Control(D); }
+	if(key==32) { var SPACE = "SPACE"; Control(SPACE); }
+}
+
+function Control(KeyPressed) {
+	console.log(KeyPressed);
 }
 
 function Setup_JSON() {
