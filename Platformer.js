@@ -64,13 +64,18 @@ function Generate_Level(layout) {
 			var width = 1000,
 				height = 1000,
 				player = {
-					x : object.style.left,
-					y : object.style.top,
+					XPos : object.style.left,
+					XVolocity : 0,
+					YPos : object.style.top,
+					YVolocity : 0,
+					Force : 10,
+					Gravity : 0.5,
 					width : 10,
-					height: 10
+					height: 10,
+					id : "player"
 				}
-				console.log("player XPos = "+player.x);
-				console.log("player YPos = "+player.y);
+				console.log("player XPos = "+player.XPos);
+				console.log("player YPos = "+player.YPos);
 				console.log("player Width = "+player.width);
 				console.log("player Height = "+player.height);
 		}
@@ -110,7 +115,10 @@ function WPressed() { console.log("W"); }
 function APressed() { console.log("A"); }
 function SPressed() { console.log("S"); }
 function DPressed() { console.log("D"); }
-function SPACEPressed() { console.log("SPACE"); }
+function SPACEPressed() {
+	var Player_Element = document.getElementById(player.id);
+	alert(Player_Element);
+}
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
 	var request_Layout = new XMLHttpRequest();
@@ -125,4 +133,4 @@ function Setup_JSON() {
 
 window.addEventListener("load", function(){
 	Setup_JSON();
-});
+});;
