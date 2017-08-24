@@ -69,6 +69,10 @@ function Generate_Level(layout) {
 					width : 10,
 					height: 10
 				}
+				console.log("player XPos = "+player.x);
+				console.log("player YPos = "+player.y);
+				console.log("player Width = "+player.width);
+				console.log("player Height = "+player.height);
 		}
 		if(target=="6") {
 			var object = document.createElement("img");
@@ -95,18 +99,18 @@ function Generate_Level(layout) {
 
 function KeyFilter(event) {
 	var key = event.keyCode;
-	console.log(key);
-	if(key==87) { var W = "W"; Control(W); }
-	if(key==65) { var A = "A"; Control(A); }
-	if(key==83) { var S = "S"; Control(S); }
-	if(key==68) { var D = "D"; Control(D); }
-	if(key==32) { var SPACE = "SPACE"; Control(SPACE); }
+	if(key==87) { WPressed(); }
+	if(key==65) { APressed(); }
+	if(key==83) { SPressed(); }
+	if(key==68) { DPressed(); }
+	if(key==32) { SPACEPressed(); }
 }
 
-function Control(KeyPressed) {
-	console.log(KeyPressed);
-}
-
+function WPressed() { console.log("W"); }
+function APressed() { console.log("A"); }
+function SPressed() { console.log("S"); }
+function DPressed() { console.log("D"); }
+function SPACEPressed() { console.log("SPACE"); }
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
 	var request_Layout = new XMLHttpRequest();
