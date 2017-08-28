@@ -115,7 +115,11 @@ function WPressed() { console.log("W"); }
 function APressed() { console.log("A"); }
 function SPressed() { console.log("S"); }
 function DPressed() { console.log("D"); }
-function SPACEPressed() { console.log("SPACE")}
+function SPACEPressed() { 
+console.log("SPACE");
+var playerYPos = player.YPos;
+document.getElementById("player").style.top = player.YPos - player.Force;
+}
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
 	var request_Layout = new XMLHttpRequest();
@@ -130,4 +134,4 @@ function Setup_JSON() {
 
 window.addEventListener("load", function(){
 	Setup_JSON();
-});;
+});
