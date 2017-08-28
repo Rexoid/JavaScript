@@ -117,8 +117,13 @@ function SPressed() { console.log("key pressed : S"); }
 function DPressed() { console.log("key pressed : D"); }
 function SPACEPressed() { 
 console.log("key pressed : SPACE");
-var playerYPos = player.YPos;
-document.getElementById("player").style.bottom = player.YPos - player.Force;
+var playerYPos = toString(player.YPos);
+console.log("Checking player.YPos : "+playerYPos);
+var YPosStr = playerYPos.replace("px",'');
+var YPosNum = Number(YPosStr);
+console.log("Checking if YPosNum is number : "+YPosNum);
+var NewYPos = YPosNum - player.Force;
+document.getElementById("player").style.top = NewYPos;
 }
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
