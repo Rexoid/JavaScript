@@ -115,6 +115,7 @@ var YPosNum = Number(YPosStr);
 console.log("Checking if YPosNum is number : "+YPosNum);
 var NewYPos = YPosNum - player.Force;
 var NewYPosStr = toString(NewYPos)+"px";
+console.log("Checking NewYPosStr : "+)
 document.getElementById("player").style.top = NewYPosStr;
 }
 function Setup_JSON() {
