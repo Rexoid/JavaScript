@@ -4,14 +4,14 @@
 })();
 
 function Check_Active(y) {
-	console.log(y);
-	console.log(y.levels[0]);
+	console.log("JSON response : "+y);
+	console.log("levels array in JSON response : "+y.levels[0]);
 	for(var i=0; i<y.levels.length; i++) {
 		var check_active = y.levels[i].Active;
-		console.log(check_active);
+		console.log("Checking if found an active level : "+check_active);
 		if(check_active == "True") {
 			var Selected_Level = y.levels[i].layout;
-			console.log(Selected_Level);
+			console.log("Checking if a level is selected : "+Selected_Level);
 			Generate_Level(Selected_Level);
 		}
 	}
@@ -111,14 +111,14 @@ function KeyFilter(event) {
 	if(key==32) { SPACEPressed(); }
 }
 
-function WPressed() { console.log("W"); }
-function APressed() { console.log("A"); }
-function SPressed() { console.log("S"); }
-function DPressed() { console.log("D"); }
+function WPressed() { console.log("key pressed : W"); }
+function APressed() { console.log("key pressed : A"); }
+function SPressed() { console.log("key pressed : S"); }
+function DPressed() { console.log("key pressed : D"); }
 function SPACEPressed() { 
-console.log("SPACE");
+console.log("key pressed : SPACE");
 var playerYPos = player.YPos;
-document.getElementById("player").style.top = player.YPos - player.Force;
+document.getElementById("player").style.bottom = player.YPos - player.Force;
 }
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
@@ -127,7 +127,7 @@ function Setup_JSON() {
 	request_Layout.responseType = "json";
 	request_Layout.send();
 	request_Layout.onload = function() {
-		console.log(request_Layout.response);
+		console.log("Checking JSON response : "+request_Layout.response);
 		Check_Active(request_Layout.response);
 	}
 }
