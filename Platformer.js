@@ -108,8 +108,8 @@ function SPressed() { console.log("key pressed : S"); }
 function DPressed() { console.log("key pressed : D"); }
 function SPACEPressed() { 
 console.log("key pressed : SPACE");
-var playerYPos = toString(player.YPos);
-console.log("Checking player.YPos : "+playerYPos);
+var playerYPos = player.YPos;
+console.log("Checking playerYPos : "+playerYPos);
 var YPosStr = playerYPos.replace("px",'');
 var YPosNum = Number(YPosStr);
 console.log("Checking if YPosNum is number : "+YPosNum);
