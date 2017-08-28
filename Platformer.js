@@ -114,7 +114,8 @@ var YPosStr = playerYPos.replace("px",'');
 var YPosNum = Number(YPosStr);
 console.log("Checking if YPosNum is number : "+YPosNum);
 var NewYPos = YPosNum - player.Force;
-document.getElementById("player").style.top = NewYPos;
+var NewYPosStr = toString(NewYPos)+"px";
+document.getElementById("player").style.top = NewYPosStr;
 }
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
