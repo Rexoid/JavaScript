@@ -118,6 +118,7 @@ console.log("Checking NewYPos : "+NewYPos);
 var NewYPosStr = String(NewYPos)+"px";
 console.log("Checking NewYPosStr : "+NewYPosStr);
 document.getElementById("player").style.top = NewYPosStr;
+player.YPos = NewYPosStr;
 }
 function Setup_JSON() {
 	var Level_Layout_JSON = "https://rawgit.com/Rexoid/JavaScript/master/Level_Layout.json?nocache"+(new Date()).getTime();
