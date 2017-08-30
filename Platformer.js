@@ -115,7 +115,7 @@ var YPosNum = Number(YPosStr);
 console.log("Checking if YPosNum is number : "+YPosNum);
 var NewYPos = YPosNum - player.Force;
 console.log("Checking NewYPos : "+NewYPos);
-var NewYPosStr = toString(NewYPos)+"px";
+var NewYPosStr = String(NewYPos)+"px";
 console.log("Checking NewYPosStr : "+NewYPosStr);
 document.getElementById("player").style.top = NewYPosStr;
 }
