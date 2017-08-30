@@ -114,6 +114,7 @@ var YPosStr = playerYPos.replace("px",'');
 var YPosNum = Number(YPosStr);
 console.log("Checking if YPosNum is number : "+YPosNum);
 var NewYPos = YPosNum - player.Force;
+console.log(player.Force);
 var NewYPosStr = toString(NewYPos)+"px";
 console.log("Checking NewYPosStr : "+NewYPosStr);
 document.getElementById("player").style.top = NewYPosStr;
@@ -130,7 +131,7 @@ function Setup_JSON() {
 	}
 }
 
-player = {
+var player = {
 	XPos : "0px",
 	XVolocity : 0,
 	YPos : "0px",
